@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kamran — Education, Technology, Creativity. Documenting what I learn and what I build.">
+<title>Kamran — fyikamran.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+–bg:           #f7f5f0;
+–ink:          #1a1814;
+–muted:        #5a5650;
+–light:        #e0ddd6;
+–accent:       #2d6a4f;
+–accent-light: #e8f4ed;
+}
+
+body {
+background: var(–bg);
+color: var(–ink);
+font-family: ‘DM Sans’, sans-serif;
+font-weight: 300;
+max-width: 520px;
+margin: 0 auto;
+padding: 0 28px 100px;
+line-height: 1.7;
+-webkit-font-smoothing: antialiased;
+}
+
+/* ── Shared: section label ── */
+.section-label {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.section-label::after {
+content: ‘’;
+flex: 1;
+height: 1px;
+background: var(–light);
+}
+
+/* ── Shared: link row ── */
+a.link {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 13px 0;
+border-bottom: 1px solid var(–light);
+text-decoration: none;
+color: var(–ink);
+font-family: ‘DM Sans’, sans-serif;
+font-size: 15px;
+transition: color 0.15s;
+}
+
+a.link:first-of-type { border-top: 1px solid var(–light); }
+a.link:hover { color: var(–accent); }
+
+a.link .arrow {
+font-family: ‘DM Mono’, monospace;
+font-size: 12px;
+color: var(–light);
+transition: color 0.15s, transform 0.15s;
+}
+
+a.link:hover .arrow { color: var(–accent); transform: translateX(3px); }
+
+/* ════════════════════════════════
+LAYER 1 — Hub
+════════════════════════════════ */
+.hub {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 60px 0;
+}
+
+.logo-mark { margin-bottom: 28px; }
+
+.logo-fyi {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–accent);
+display: block;
+margin-bottom: 4px;
+}
+
+.logo-name {
+font-family: ‘Playfair Display’, serif;
+font-size: 42px;
+font-weight: 500;
+color: var(–ink);
+line-height: 1;
+display: block;
+}
+
+.verticals {
+font-family: ‘DM Mono’, monospace;
+font-size: 11px;
+letter-spacing: 0.15em;
+color: var(–ink);
+margin-bottom: 8px;
+}
+
+.tagline {
+font-family: ‘Playfair Display’, serif;
+font-style: italic;
+font-size: 17px;
+color: var(–ink);
+margin-bottom: 56px;
+}
+
+/* Verticals */
+.vertical { margin-bottom: 36px; }
+
+.vertical-label {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 8px;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.vertical-label::after {
+content: ‘’;
+flex: 1;
+height: 1px;
+background: var(–light);
+}
+
+.vertical-desc {
+font-size: 15px;
+color: var(–ink);
+line-height: 1.7;
+}
+
+/* ════════════════════════════════
+LAYER 2 — Work log
+════════════════════════════════ */
+.work-log {
+padding: 60px 0;
+border-top: 1px solid var(–light);
+}
+
+.work-log-sub {
+font-family: ‘DM Mono’, monospace;
+font-size: 11px;
+letter-spacing: 0.06em;
+color: var(–muted);
+margin-bottom: 28px;
+}
+
+.entry {
+display: flex;
+gap: 20px;
+padding: 16px 0;
+border-bottom: 1px solid var(–light);
+text-decoration: none;
+color: var(–ink);
+transition: color 0.15s;
+}
+
+.entry:first-of-type { border-top: 1px solid var(–light); }
+.entry:hover { color: var(–accent); }
+
+.entry-date {
+font-family: ‘DM Mono’, monospace;
+font-size: 11px;
+color: var(–muted);
+white-space: nowrap;
+padding-top: 2px;
+min-width: 72px;
+flex-shrink: 0;
+}
+
+.entry-title {
+font-size: 15px;
+font-weight: 400;
+color: var(–ink);
+margin-bottom: 3px;
+transition: color 0.15s;
+}
+
+.entry:hover .entry-title { color: var(–accent); }
+
+.entry-tag {
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(–muted);
+}
+
+.empty-state {
+padding: 20px 0;
+font-family: ‘DM Mono’, monospace;
+font-size: 11px;
+color: var(–muted);
+letter-spacing: 0.06em;
+border-top: 1px solid var(–light);
+border-bottom: 1px solid var(–light);
+}
+
+/* ════════════════════════════════
+LAYER 3 — Find Me
+════════════════════════════════ */
+.find-me {
+padding: 60px 0 0;
+border-top: 1px solid var(–light);
+}
+
+/* ── Footer ── */
+footer {
+margin-top: 64px;
+padding-top: 20px;
+border-top: 1px solid var(–light);
+display: flex;
+justify-content: space-between;
+font-family: ‘DM Mono’, monospace;
+font-size: 10px;
+letter-spacing: 0.1em;
+color: var(–muted);
+}
+</style>
+
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     LAYER 1 — Hub
+════════════════════════════════ -->
+
+<div class="hub">
+
+  <div class="logo-mark">
+    <span class="logo-fyi">FYI</span>
+    <span class="logo-name">Kamran</span>
+  </div>
+
+  <p class="verticals">Education · Technology · Creativity</p>
+  <p class="tagline">Documenting what I learn and what I build.</p>
+
+  <div class="vertical">
+    <div class="vertical-label">Higher Education</div>
+    <p class="vertical-desc">Ten years in Higher Education — first teaching Engineering, now working to improve how universities teach and support learning.</p>
+  </div>
+
+  <div class="vertical">
+    <div class="vertical-label">Technology</div>
+    <p class="vertical-desc">Full Stack Developer and Python enthusiast. I build tools, web apps, and data projects.</p>
+  </div>
+
+  <div class="vertical">
+    <div class="vertical-label">Creativity</div>
+    <p class="vertical-desc">Experimenting with video, courses, and content. Documenting the journey on YouTube.</p>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════
+     LAYER 2 — Work log
+════════════════════════════════ -->
+
+<div class="work-log">
+
+  <div class="section-label">Work</div>
+  <p class="work-log-sub">Most recent first. Updated as I build and create.</p>
+
+  <!-- Add entries as you ship things:
+
+  <a href="#" target="_blank" rel="noopener" class="entry">
+    <span class="entry-date">Apr 2026</span>
+    <div>
+      <div class="entry-title">Project or video title</div>
+      <div class="entry-tag">Technology · Python</div>
+    </div>
+  </a>
+
+  -->
+
+  <div class="empty-state">Nothing here yet — check back soon.</div>
+
+</div>
+
+<!-- ════════════════════════════════
+     LAYER 3 — Find Me
+════════════════════════════════ -->
+
+<div class="find-me">
+
+  <div class="section-label">Find Me</div>
+
+  <a href="https://linkedin.com/in/mrmkamran" target="_blank" rel="noopener" class="link">
+    LinkedIn <span class="arrow">→</span>
+  </a>
+  <a href="https://github.com/fyikamran" target="_blank" rel="noopener" class="link">
+    GitHub <span class="arrow">→</span>
+  </a>
+  <a href="https://youtube.com/@fyikamran" target="_blank" rel="noopener" class="link">
+    YouTube <span class="arrow">→</span>
+  </a>
+  <a href="mailto:hello@fyikamran.com" class="link">
+    hello@fyikamran.com <span class="arrow">→</span>
+  </a>
+
+</div>
+
+<footer>
+  <span>fyikamran.com</span>
+  <span>For your information — and mine.</span>
+</footer>
+
+</body>
+</html>
