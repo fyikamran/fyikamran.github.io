@@ -1,0 +1,7 @@
+title: "FYI Kamran"
+url: "https://fyikamran.com"
+permalink: /:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
