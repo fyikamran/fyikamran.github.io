@@ -16,14 +16,13 @@ html, body {
 .site-container {
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .post-container {
   width:100%
   max-width: 720px; 
-  margin: auto;
-  padding: 0 20px; 
+  margin: 0 auto;
 }
 
 
