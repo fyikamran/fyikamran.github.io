@@ -10,16 +10,14 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  {% include header.html %}
-    
-  <!-- The Core Page Content -->
-  <main class="post-content">
-    <article>
-     {{ content }}
-    </article>
-  </main>
-  
-  {% include footer.html %}
-</body>
-      
+  <div class="site-container">
+    {% include header.html %}
+    <main class="post-container">
+      <article>
+       {{ content }}
+      </article>
+    </main>
+    {% include footer.html %}
+  </div>
+</body>    
 </html>
