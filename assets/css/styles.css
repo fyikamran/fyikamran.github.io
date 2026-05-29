@@ -30,46 +30,6 @@ html, body {
 }
 
 
-/* ── Logo ── */
-.logo-mark { margin-bottom: 20px; }
-
-.logo-fyi {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-letter-spacing: 0.3em;
-text-transform: uppercase;
-color: var(–accent);
-display: block;
-margin-bottom: 4px;
-}
-
-.logo-name {
-font-family: ‘Playfair Display’, serif;
-font-size: 44px;
-font-weight: 500;
-color: var(–ink);
-line-height: 1;
-display: block;
-}
-
-.verticals {
-font-family: ‘DM Mono’, monospace;
-font-size: 11px;
-letter-spacing: 0.15em;
-color: var(–ink);
-margin-bottom: 6px;
-}
-
-.tagline {
-font-family: ‘Playfair Display’, serif;
-font-style: italic;
-font-size: 16px;
-color: var(–ink);
-margin-bottom: 40px;
-}
-
-
-
 /* ── Social icons ── */
 .social {
 display: flex;
@@ -101,9 +61,5 @@ display: block;
 /* ── Footer ── */
 footer {
 margin-top: 28px;
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-letter-spacing: 0.1em;
-color: var(–muted);
 text-align: center;
 }
