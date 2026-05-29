@@ -1,6 +1,9 @@
 /* assets/styles.css */
 *, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -11,31 +14,34 @@
 –accent: #2d6a4f;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 1080px;
+  font-size:1rem;
+  line-spacing:1.2rem;
+}
+
 p, span, a {
   max-width: 100%;
   word-wrap: break-word;
-  font-size:1em;
-  line-spacing:1.2em;
-}
-
-html, body {
-  width: 100%;
-  max-width: 1080px;
-  font-size:1em;
-  line-spacing:1.2em;
 }
 
 .site-container {
   width: 100%;
   max-width: 1080px;
   margin: auto;
+  padding: 0 1rem;
+
 }
 
 .post-container {
   width:100%
   max-width: 680px; 
   margin: auto;
-  padding:20px;
 }
 
 
