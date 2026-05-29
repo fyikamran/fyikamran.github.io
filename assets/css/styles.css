@@ -33,7 +33,7 @@ p, span, a {
 .site-container {
   width: 100%;
   max-width: 1080px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 1rem;
 
 }
@@ -41,7 +41,7 @@ p, span, a {
 .post-container {
   width:100%
   max-width: 680px; 
-  margin: auto;
+  margin: 0 auto;
 }
 
 
