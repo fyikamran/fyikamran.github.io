@@ -8,23 +8,30 @@
 –accent: #2d6a4f;
 }
 
-html, body { height: 100%; overflow: hidden; }
-
-body {
-background: var(–bg);
-color: var(–ink);
-font-family: ‘DM Sans’, sans-serif;
-font-weight: 300;
-max-width: 520px;
-margin: 0 auto;
-padding: 0 28px;
-line-height: 1.6;
--webkit-font-smoothing: antialiased;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
+/* Base Reset (Full viewport width) */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #111;
+  color: #fff;
 }
+
+/* Global Structural Shell (Perfect for Header, Navigation, Footer grids) */
+.site-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Mobile safety padding */
+}
+
+/* Deep-Reading Target (Just for blog posts & pages */
+.post-container {
+  width: 100%;
+  max-width: 700px; /* Narrower boundary so your eyes don't get tired reading */
+  margin: 0 auto;
+}
+
 
 /* ── Logo ── */
 .logo-mark { margin-bottom: 20px; }
