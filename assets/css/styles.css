@@ -21,13 +21,13 @@ p, span, a {
 html, body {
   width: 100%;
   max-width: 1080px;
-  margin:auto;
-  padding:0;
+  font-size:1em;
+  line-spacing:1.2em;
 }
 
 .site-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1080px;
   margin: auto;
   padding: 20px;
 }
