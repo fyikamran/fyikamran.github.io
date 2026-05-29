@@ -8,7 +8,6 @@
 –accent: #2d6a4f;
 }
 
-/* Base Reset (Full viewport width) */
 html, body {
   margin: 0;
   padding: 0;
@@ -17,18 +16,16 @@ html, body {
   color: #fff;
 }
 
-/* Global Structural Shell (Perfect for Header, Navigation, Footer grids) */
 .site-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Mobile safety padding */
+  padding: 0 20px; 
 }
 
-/* Deep-Reading Target (Just for blog posts & pages */
 .post-container {
   width: 100%;
-  max-width: 700px; /* Narrower boundary so your eyes don't get tired reading */
+  max-width: 700px; 
   margin: 0 auto;
 }
 
@@ -71,33 +68,7 @@ color: var(–ink);
 margin-bottom: 40px;
 }
 
-/* ── Verticals ── */
-.vertical { margin-bottom: 26px; }
 
-.vertical-label {
-font-family: ‘DM Mono’, monospace;
-font-size: 10px;
-letter-spacing: 0.22em;
-text-transform: uppercase;
-color: var(–accent);
-margin-bottom: 4px;
-display: flex;
-align-items: center;
-gap: 12px;
-}
-
-.vertical-label::after {
-content: ‘’;
-flex: 1;
-height: 1px;
-background: var(–light);
-}
-
-.vertical-desc {
-font-size: 14px;
-color: var(–muted);
-line-height: 1.65;
-}
 
 /* ── Social icons ── */
 .social {
