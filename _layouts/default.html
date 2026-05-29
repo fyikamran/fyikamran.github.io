@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  {% seo %}
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111111;
+      color: #999999;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 650px;
+    }
+    .header {
+      margin-bottom: 60px;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+      font-style: italic;
+    }
+    .vertical {
+      margin-bottom: 40px;
+    }
+    .vertical-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #555555;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .vertical-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 0 15px 0;
+    }
+    .blog-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .blog-item {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .blog-date {
+      font-size: 14px;
+      color: #555555;
+      width: 130px;
+      flex-shrink: 0;
+    }
+    .blog-link {
+      font-size: 15px;
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px dashed #333333;
+      transition: border-color 0.2s;
+    }
+    .blog-link:hover {
+      border-bottom-color: #ffffff;
+    }
+    /* Blog post content styling wrapper */
+    .post-content h1, .post-content h2, .post-content h3 {
+      color: #ffffff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+    .post-content p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .post-content a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="/" class="logo">fyi kamran</a>
+    </header>
+    
+    <main>
+      {{ content }}
+    </main>
+  </div>
+</body>
+</html>
