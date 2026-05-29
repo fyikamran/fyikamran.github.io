@@ -13,7 +13,9 @@
 
 p, span, a {
   max-width: 100%;
-  word-wrap: break-word; 
+  word-wrap: break-word;
+  font-size:1em;
+  line-spacing:1.2em;
 }
 
 html, body {
