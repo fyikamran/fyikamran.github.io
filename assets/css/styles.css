@@ -29,13 +29,13 @@ html, body {
   width: 100%;
   max-width: 1080px;
   margin: auto;
-  padding: 20px;
 }
 
 .post-container {
   width:100%
   max-width: 680px; 
-  margin: 0 24px;
+  margin: auto;
+  padding:20px;
 }
 
 
