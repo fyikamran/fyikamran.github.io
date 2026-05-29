@@ -21,13 +21,11 @@ html{
 body {
   width: 100%;
   max-width: 1080px;
-  font-size:1rem;
-  line-spacing:1.2rem;
+  font-size:1em;
+  line-spacing:1.2em;
 }
 
 p, span, a {
-  max-width: 100%;
-  word-wrap: break-word;
 }
 
 .site-container {
