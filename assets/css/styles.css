@@ -1,4 +1,7 @@
 /* assets/styles.css */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 :root {
 –bg:     #f7f5f0;
@@ -6,6 +9,11 @@
 –muted:  #3d3a34;
 –light:  #e0ddd6;
 –accent: #2d6a4f;
+}
+
+p, span, a {
+  max-width: 100%;
+  word-wrap: break-word; 
 }
 
 html, body {
