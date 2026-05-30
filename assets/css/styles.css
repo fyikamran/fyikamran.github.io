@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Global Resets & Body (Medium Typography Base)
+   1. Global Resets & Body
    ========================================================================== */
 * {
   box-sizing: border-box;
@@ -8,9 +8,8 @@
 }
 
 body {
-  /* System font stack matching Medium's clean UI look */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 20px; /* Larger base font for effortless long-form reading */
+  font-size: 16px; 
   line-height: 1.6;
   color: #292929; /* Off-black reduces eye strain */
   background-color: #ffffff;
@@ -57,7 +56,7 @@ header {
    ========================================================================== */
 /* Header Branding */
 .logo-mark {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
 }
 .logo-fyi {
@@ -74,7 +73,7 @@ header {
 
 /* Post Content */
 article h1 {
-  font-size: 42px;
+  font-size: 36px;
   line-height: 1.2;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -83,7 +82,7 @@ article h1 {
 }
 
 article h3 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.3;
   margin-top: 42px;
   margin-bottom: 16px;
