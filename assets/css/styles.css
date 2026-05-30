@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
    max-width: 680px; 
   margin: 0 auto;   
-  padding: 0 24px; 
+  padding: 0 12px; 
 }
 
 /* The core container that forces everything into a single central column */
@@ -36,7 +36,7 @@ footer {
   width: 100%;
   max-width: 680px; /* The optimal line-length sweet spot */
   margin: 0 auto;   /* Centers the column horizontally */
-  padding: 0 24px;  /* Prevents content touching edge on mobile screen */
+  padding: 0 12px;  /* Prevents content touching edge on mobile screen */
 }
 
 /* Vertical whitespace distribution */
@@ -96,12 +96,12 @@ article p {
 
 /* List Styles */
 article ul {
-  margin-bottom: 24px;
-  padding-left: 24px;
+  margin-bottom: 16px;
+  padding-left: 16px;
 }
 
 article li {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 /* Inline Code formatting used in your list */
@@ -121,7 +121,8 @@ article code {
   gap: 20px;
   align-items: center;
   padding-top: 40px;
-  border-top: 1px solid #eeeeee; /* Light divider line above footer elements */
+  border-top: 1px solid #eeeeee;
+   margin: 0 auto;
 }
 
 .social a {
