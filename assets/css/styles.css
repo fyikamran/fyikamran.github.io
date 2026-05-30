@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Base Reset & Body Styles
+   1. Global Resets & Body (Medium Typography Base)
    ========================================================================== */
 * {
   box-sizing: border-box;
@@ -8,16 +8,17 @@
 }
 
 body {
+  /* System font stack matching Medium's clean UI look */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 20px; /* Medium uses a larger base font for readability */
+  font-size: 20px; /* Larger base font for effortless long-form reading */
   line-height: 1.6;
-  color: #292929;
+  color: #292929; /* Off-black reduces eye strain */
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ==========================================================================
-   2. Layout Container (The Single Column Magic)
+   2. Structural Single-Column Layout
    ========================================================================== */
 .site-container {
   display: flex;
@@ -25,100 +26,122 @@ body {
   min-height: 100vh;
 }
 
-/* Constrain the main content area just like Medium */
-.post-container {
-  max-width: 680px; /* Optimal width for reading 60-70 characters per line */
+/* The core container that forces everything into a single central column */
+header, 
+.post-container, 
+.social, 
+footer {
   width: 100%;
-  margin: 0 auto;  /* Centers the column */
-  padding: 40px 20px; /* Prevents text from touching screen edges on mobile */
-  flex: 1; /* Pushes footer to the bottom if content is short */
+  max-width: 680px; /* The optimal line-length sweet spot */
+  margin: 0 auto;   /* Centers the column horizontally */
+  padding: 0 24px;  /* Prevents content touching edge on mobile screen */
+}
+
+/* Vertical whitespace distribution */
+header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.post-container {
+  flex: 1; /* Pushes footer down if content is brief */
+  padding-top: 20px;
+  padding-bottom: 60px;
 }
 
 /* ==========================================================================
-   3. Typography & Elements (Medium Aesthetics)
+   3. Element Typography & Details
    ========================================================================== */
+/* Header Branding */
+.logo-mark {
+  font-size: 22px;
+  font-weight: 700;
+}
+.logo-fyi {
+  background: #292929;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+.logo {
+  text-decoration: none;
+  color: #292929;
+}
+
+/* Post Content */
 article h1 {
   font-size: 42px;
-  line-height: 1.25;
+  line-height: 1.2;
   font-weight: 700;
-  letter-spacing: -0.022em;
-  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
   color: #1a1a1a;
 }
 
-article h2 {
-  font-size: 28px;
-  line-height: 1.33;
-  font-weight: 600;
-  letter-spacing: -0.018em;
-  margin-top: 32px;
+article h3 {
+  font-size: 24px;
+  line-height: 1.3;
+  margin-top: 42px;
   margin-bottom: 16px;
+  font-weight: 600;
 }
 
 article p {
   margin-bottom: 24px;
-  letter-spacing: -0.003em;
+  word-break: break-word;
 }
 
-/* Blockquotes */
-article blockquote {
-  font-style: italic;
-  border-left: 3px solid #292929;
-  padding-left: 20px;
-  margin: 32px 0;
-  color: #6b6b6b;
+/* List Styles */
+article ul {
+  margin-bottom: 24px;
+  padding-left: 24px;
 }
 
-/* Images */
-article img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 32px auto;
+article li {
+  margin-bottom: 12px;
 }
 
-/* ==========================================================================
-   4. Header & Footer (Full-width but aligned)
-   ========================================================================== */
-header, footer {
-  width: 100%;
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 20px;
+/* Inline Code formatting used in your list */
+article code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.85em;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3px 6px;
+  border-radius: 4px;
 }
 
 /* ==========================================================================
-   5.  Social icons
+   4. Social Widget & Footer Formatting
    ========================================================================== */
 .social {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 36px;
-margin-top: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid #eeeeee; /* Light divider line above footer elements */
 }
 
 .social a {
-display: flex;
-align-items: center;
-justify-content: center;
-color: var(–ink);
-transition: color 0.15s;
-text-decoration: none;
+  color: #6b6b6b;
+  transition: color 0.15s ease;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 
-.social a:hover { color: var(–accent); }
-
-.social a, .social a:visited { color: #1a1814; }
-.social a svg {
-width: 22px;
-height: 22px;
-fill: currentColor;
-display: block;
+.social a:hover {
+  color: #1a1a1a; /* Darkens on hover */
 }
 
-/* ── Footer ── */
+.social svg {
+  width: 100%;
+  height: 100%;
+}
+
 footer {
-margin-top: 28px;
-text-align: center;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  font-size: 14px;
+  color: #6b6b6b;
 }
