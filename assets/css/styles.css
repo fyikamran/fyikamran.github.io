@@ -147,4 +147,6 @@ footer {
   padding-bottom: 60px;
   font-size: 14px;
   color: #6b6b6b;
+  max-width: 680px; 
+  margin: 0 auto;   
 }
