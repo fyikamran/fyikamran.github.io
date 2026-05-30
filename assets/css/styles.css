@@ -24,6 +24,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+   max-width: 680px; 
+  margin: 0 auto;   
+  padding: 0 24px; 
 }
 
 /* The core container that forces everything into a single central column */
