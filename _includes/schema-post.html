@@ -1,0 +1,60 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ page.url | absolute_url }}#post",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      {% if page.last_modified_at %}
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+      {% else %}
+      "dateModified": "{{ page.date | date_to_xmlschema }}",
+      {% endif %}
+      "url": "{{ page.url | absolute_url }}",
+      {% if page.image %}
+      "image": "{{ page.image | absolute_url }}",
+      {% endif %}
+      "keywords": {{ page.tags | jsonify }},
+      "articleSection": {{ page.category | jsonify }},
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "{{ site.schema.person_id }}"
+      },
+      "publisher": {
+        "@id": "{{ site.schema.person_id }}"
+      },
+      "mainEntityOfPage": {
+        "@id": "{{ page.url | absolute_url }}"
+      },
+      "isPartOf": {
+        "@id": "https://fyikamran.com/#website"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "isPartOf": {
+        "@id": "https://fyikamran.com/#website"
+      },
+      "author": {
+        "@id": "{{ site.schema.person_id }}"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fyikamran.com/#website",
+      "url": "{{ site.url }}",
+      "name": {{ site.title | jsonify }},
+      "publisher": {
+        "@id": "{{ site.schema.person_id }}"
+      }
+    }
+  ]
+}
+</script>
