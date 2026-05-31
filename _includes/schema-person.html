@@ -23,24 +23,31 @@
         {
           "@type": "EducationalOrganization",
           "name": {{ site.schema.alumni_nust | jsonify }},
-          "url": "{{ site.schema.alumni_nust_url }}",
-          "credential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Master of Science (MS) in Structural Engineering",
-            "credentialCategory": "degree",
-            "dateAwarded": "2016"            
-            }
+          "url": "{{ site.schema.alumni_nust_url }}"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Master of Science (MS) in Structural Engineering",
+          "credentialCategory": "degree",
+          "dateAwarded": "2016",
+          "recognizedBy": {
+            "@type": "EducationalOrganization",
+            "name": {{ site.schema.alumni_nust | jsonify }},
+            "url": "{{ site.schema.alumni_nust_url }}"
+          }
         },
         {
-          "@type": "EducationalOrganization",
-          "name": {{ site.schema.alumni_nust | jsonify }},
-          "url": "{{ site.schema.alumni_nust_url }}",
-          "credential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "Bachelor of Engineering (BE) in Civil Engineering",
-            "credentialCategory": "degree",
-            "dateAwarded": "2012"          
-            }
+          "@type": "EducationalOccupationalCredential",
+          "name": "Bachelor of Engineering (BE) in Civil Engineering",
+          "credentialCategory": "degree",
+          "dateAwarded": "2012",
+          "recognizedBy": {
+            "@type": "EducationalOrganization",
+            "name": {{ site.schema.alumni_nust | jsonify }},
+            "url": "{{ site.schema.alumni_nust_url }}"
+          }
         }
       ],
       "hasOccupation": [
