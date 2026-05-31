@@ -1,96 +1,128 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "{{ site.schema.person_id }}",
-  "name": "{{ site.schema.name }}",
-  "alternateName": "{{ site.schema.alternate_name }}",
-  "url": "{{ site.url }}",
-  "image": "{{ site.schema.image }}",
-  "description": "{{ site.schema.description }}",
-  "jobTitle": "{{ site.schema.job_title }}",
-  "worksFor": {
-    "@type": "EducationalOrganization",
-    "name": "{{ site.schema.works_for_name }}",
-    "url": "{{ site.schema.works_for_url }}"
-  },
-  "alumniOf": [
+  "@graph": [
     {
-      "@type": "EducationalOrganization",
-      "name": "{{ site.schema.alumni_nust }}",
-      "url": "{{ site.schema.alumni_nust_url }}",
-      "description": "Master of Science (MS) in Structural Engineering"
+      "@type": "Person",
+      "@id": "{{ site.schema.person_id }}",
+      "name": {{ site.schema.name | jsonify }},
+      "alternateName": {{ site.schema.alternate_name | jsonify }},
+      "url": "{{ site.url }}",
+      "image": "{{ site.schema.image }}",
+      "description": {{ site.schema.description | jsonify }},
+      "jobTitle": {{ site.schema.job_title | jsonify }},
+      "mainEntityOfPage": {
+        "@id": "{{ page.url | absolute_url }}"
+      },
+      "worksFor": {
+        "@type": "EducationalOrganization",
+        "name": {{ site.schema.works_for_name | jsonify }},
+        "url": "{{ site.schema.works_for_url }}"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": {{ site.schema.alumni_nust | jsonify }},
+          "url": "{{ site.schema.alumni_nust_url }}",
+          "description": "Master of Science (MSc) in Structural Engineering"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": {{ site.schema.alumni_nust | jsonify }},
+          "url": "{{ site.schema.alumni_nust_url }}",
+          "description": "Bachelor of Science (BSc) in Civil Engineering"
+        }
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Role",
+          "startDate": "2021",
+          "roleName": "Academic Developer",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Academic Developer",
+            "description": "Documenting the intersection of pedagogy, custom software builds, and digital learning."
+          }
+        },
+        {
+          "@type": "Role",
+          "startDate": "2016",
+          "endDate": "2021",
+          "roleName": "Engineering Lecturer",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Engineering Lecturer",
+            "description": "Taught civil and structural engineering modules."
+          }
+        },
+        {
+          "@type": "Role",
+          "startDate": "2013",
+          "endDate": "2016",
+          "roleName": "Structural / Civil Engineer",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Structural Engineer",
+            "description": "Practicing structural and civil engineering design."
+          }
+        },
+        {
+          "@type": "Role",
+          "startDate": "2010",
+          "roleName": "Indie App Developer",
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Software Developer",
+            "description": "Designing, developing, and publishing independent web and mobile applications."
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Higher Education",
+        "Educational Technology",
+        "Pedagogy",
+        "Structural Engineering",
+        "Civil Engineering",
+        "Python Programming",
+        "Full-Stack Development",
+        "Web Development",
+        "Mobile App Development",
+        "Software Engineering",
+        "Content Creation",
+        "Search Engine Optimization"
+      ],
+      "sameAs": [
+        "{{ site.schema.linkedin }}",
+        "{{ site.schema.youtube }}",
+        "{{ site.schema.github }}",
+        "{{ site.schema.medium }}",
+        "{{ site.schema.orcid }}",
+        "{{ site.schema.scholar }}"
+      ]
     },
     {
-      "@type": "EducationalOrganization",
-      "name": "{{ site.schema.alumni_nust }}",
-      "url": "{{ site.schema.alumni_nust_url }}",
-      "description": "Bachelor of Engineering (BE) in Civil Engineering"
+      "@type": "WebSite",
+      "@id": "https://fyikamran.com/#website",
+      "url": "{{ site.url }}",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "publisher": {
+        "@id": "{{ site.schema.person_id }}"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "isPartOf": {
+        "@id": "https://fyikamran.com/#website"
+      },
+      "about": {
+        "@id": "{{ site.schema.person_id }}"
+      }
     }
-  ],
-  "hasOccupation": [
-    {
-      "@type": "Role",
-      "startDate": "2023",
-      "roleName": "Academic Developer",
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Academic Developer",
-        "description": "Teaching Pedagogy and digital learning."
-      }
-    },
-    {
-      "@type": "Role",
-      "startDate": "2016",
-      "endDate": "2022",
-      "roleName": "Engineering Lecturer",
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Engineering Lecturer",
-        "description": "Taught civil and structural engineering modules."
-      }
-    },
-    {
-      "@type": "Role",
-      "startDate": "2013",
-      "endDate": "2016",
-      "roleName": "Structural / Civil Engineer",
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Structural Engineer",
-        "description": "Practicing structural and civil engineering design."
-      }
-    },
-    {
-      "@type": "Role",
-      "startDate": "2010",
-      "roleName": "Indie App Developer",
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Software Developer",
-        "description": "Designing, developing, and publishing web and mobile applications."
-      }
-    }
-  ],
-  "knowsAbout": [
-    "Higher Education",
-    "Educational Technology",
-    "Pedagogy",
-    "Structural Engineering",
-    "Civil Engineering",
-    "Python Programming",
-    "Full-Stack Development",
-    "Web Development",
-    "Mobile App Development",
-    "Software Engineering",
-    "Content Creation",
-    "Search Engine Optimization"
-  ],
-  "sameAs": [
-    "{{ site.schema.linkedin }}",
-    "{{ site.schema.youtube }}",
-    "{{ site.schema.github }}",
-    "{{ site.schema.medium }}"
   ]
 }
 </script>
