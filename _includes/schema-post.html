@@ -16,21 +16,23 @@
       "url": "{{ page.url | absolute_url }}",
       {% if page.image %}
       "image": "{{ page.image | absolute_url }}",
+      {% else %}
+      "image": "{{ site.default_image | absolute_url }}",
       {% endif %}
       "keywords": {{ page.tags | jsonify }},
       "articleSection": {{ page.category | jsonify }},
       "inLanguage": "en-GB",
       "author": {
+        "@type": "Person",
         "@id": "{{ site.schema.person_id }}"
       },
       "publisher": {
+        "@type": "Person",
         "@id": "{{ site.schema.person_id }}"
       },
       "mainEntityOfPage": {
+        "@type": "WebPage",
         "@id": "{{ page.url | absolute_url }}"
-      },
-      "isPartOf": {
-        "@id": "https://fyikamran.com/#website"
       }
     },
     {
@@ -40,9 +42,11 @@
       "name": {{ page.title | jsonify }},
       "description": {{ page.description | jsonify }},
       "isPartOf": {
+        "@type": "WebSite",
         "@id": "https://fyikamran.com/#website"
       },
       "author": {
+        "@type": "Person",
         "@id": "{{ site.schema.person_id }}"
       }
     },
@@ -52,6 +56,7 @@
       "url": "{{ site.url }}",
       "name": {{ site.title | jsonify }},
       "publisher": {
+        "@type": "Person",
         "@id": "{{ site.schema.person_id }}"
       }
     }
