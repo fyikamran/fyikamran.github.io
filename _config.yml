@@ -1,7 +1,9 @@
 title: "FYI Kamran"
 url: "https://fyikamran.com"
-permalink: /:title/
+permalink: /:slug/
 
 plugins:
-  - jekyll-seo-tag
   - jekyll-sitemap
+
+author: Kamran
+description: "Academic Developer with background in Teaching, Engineering, and Indie App Development."
