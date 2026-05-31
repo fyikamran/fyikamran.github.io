@@ -24,35 +24,45 @@
           "@type": "EducationalOrganization",
           "name": {{ site.schema.alumni_nust | jsonify }},
           "url": "{{ site.schema.alumni_nust_url }}",
-          "description": "Master of Science (MSc) in Structural Engineering"
+          "credential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Master of Science (MS) in Structural Engineering",
+            "credentialCategory": "degree",
+            "dateAwarded": "2016"            
+            }
         },
         {
           "@type": "EducationalOrganization",
           "name": {{ site.schema.alumni_nust | jsonify }},
           "url": "{{ site.schema.alumni_nust_url }}",
-          "description": "Bachelor of Science (BSc) in Civil Engineering"
+          "credential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Bachelor of Engineering (BE) in Civil Engineering",
+            "credentialCategory": "degree",
+            "dateAwarded": "2012"          
+            }
         }
       ],
       "hasOccupation": [
         {
           "@type": "Role",
-          "startDate": "2021",
+          "startDate": "2023",
           "roleName": "Academic Developer",
           "hasOccupation": {
             "@type": "Occupation",
             "name": "Academic Developer",
-            "description": "Documenting the intersection of pedagogy, custom software builds, and digital learning."
+            "description": "Enhancing quality of teaching, digital learning, and academic staff development in higher education"
           }
         },
         {
           "@type": "Role",
           "startDate": "2016",
-          "endDate": "2021",
+          "endDate": "2022",
           "roleName": "Engineering Lecturer",
           "hasOccupation": {
             "@type": "Occupation",
             "name": "Engineering Lecturer",
-            "description": "Taught civil and structural engineering modules."
+            "description": "Taught civil and structural engineering modules and supported curriculum development."
           }
         },
         {
@@ -95,9 +105,7 @@
         "{{ site.schema.linkedin }}",
         "{{ site.schema.youtube }}",
         "{{ site.schema.github }}",
-        "{{ site.schema.medium }}",
-        "{{ site.schema.orcid }}",
-        "{{ site.schema.scholar }}"
+        "{{ site.schema.medium }}"
       ]
     },
     {
