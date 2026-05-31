@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Welcome to My Site"
+slug: "welcome-to-my-site"
 ---
 
 # Hello World
