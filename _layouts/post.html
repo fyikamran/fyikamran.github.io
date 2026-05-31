@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include seo-meta.html %}
+  {% include schema-post.html %}
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div class="site-container">
+    {% include header.html %}
+    <div class="post-container">
+      <main>
+        <article>
+          {{ content }}
+        </article>
+      </main>
+    </div>
+    {% include footer.html %}
+  </div>
+</body>
+</html>
