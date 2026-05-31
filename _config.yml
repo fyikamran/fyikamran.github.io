@@ -7,3 +7,21 @@ plugins:
 
 author: Kamran
 description: "Academic Developer with background in Teaching, Engineering, and Indie App Development."
+
+schema:
+  person_id: "https://fyikamran.com/#person"
+  name: "Muhammad Kamran"
+  alternate_name: "Kamran"
+  image: "https://fyikamran.com/images/kamran-profile.jpg"
+  description: "Academic Developer with background in Teaching, Engineering, and Indie App Development."
+  job_title: "Academic Developer"
+  works_for_name: "London South Bank University"
+  works_for_url: "https://www.lsbu.ac.uk"
+  alumni_nust: "National University of Sciences and Technology (NUST)"
+  alumni_nust_url: "https://nust.edu.pk"
+  linkedin: "https://www.linkedin.com/in/fyikamran"
+  youtube: "https://www.youtube.com/@fyikamran"
+  github: "https://github.com/fyikamran"
+  medium: "https://medium.com/@fyikamran"
+  orcid: "https://orcid.org/0000-XXXX-XXXX-XXXX"
+  scholar: "https://scholar.google.com/citations?user=YOUR_ID"
