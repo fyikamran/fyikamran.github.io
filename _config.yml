@@ -6,7 +6,7 @@ plugins:
   - jekyll-sitemap
 
 author: Kamran
-description: "Academic Developer with background in Teaching, Engineering, and Indie App Development."
+description: "Academic Developer, working at the intersection of education and technology, with a background in teaching and engineering, and an Indie developer building online since 2010."
 
 schema:
   person_id: "https://fyikamran.com/#person"
@@ -14,7 +14,7 @@ schema:
   alternate_name: "Kamran"
   twitter: "fyikamran"
   image: "https://fyikamran.com/images/kamran-profile.jpg"
-  description: "Academic Developer with background in Teaching, Engineering, and Indie App Development."
+  description: "Academic Developer working at the intersection of education and technology. Experienced in teaching and engineering, and an Indie developer building online."
   job_title: "Academic Developer"
   works_for_name: "London South Bank University"
   works_for_url: "https://www.lsbu.ac.uk"
