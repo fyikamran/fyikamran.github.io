@@ -18,7 +18,7 @@ description: "Academic Developer with background in Teaching, Engineering, and I
 {% if site.posts.size > 0 %}
 <section aria-label="Recent writing">
   <h2>Recent Writing</h2>
-  <ul>
+  <ul class="post-list">
     {% for post in site.posts limit: 5 %}
       <li>
         <time>{{ post.date | date: "%B %Y" }}</time>
