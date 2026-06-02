@@ -12,7 +12,7 @@
   Variables
   ========================================================================== */
 :root {
- --bg: #fcfcfc;
+ --bg: #ffffff;
  --text: #111111;
  --text-muted: #999999;
  --font-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
@@ -59,7 +59,7 @@ header nav {
 header nav a {
  font-family: var(--font-ui);
  font-size: 1rem;
- white-space: nowrap;
+
  text-decoration: none;
 }
 
@@ -79,7 +79,7 @@ header nav a:hover {
   Main
   ========================================================================== */
 main {
- padding: 2rem 0 4rem;
+ padding: 2rem 2rem 4rem;
 }
 
 /* ==========================================================================
