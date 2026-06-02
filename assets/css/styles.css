@@ -15,6 +15,7 @@
  --bg: #ffffff;
  --text: #111111;
  --text-muted: #999999;
+ --muted: #D3D3D3;
  --font-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
  --font-mono: 'Courier New', Courier, monospace;
@@ -161,7 +162,7 @@ a:hover {
   ========================================================================== */
 hr {
  border: none;
- border-top: 1px solid var(--text-muted);
+ border-top: 1px solid var(--muted);
  margin: 2rem 0;
 }
 
@@ -171,7 +172,7 @@ hr {
 article header {
  margin-bottom: 2rem;
  padding-bottom: 1.5rem;
- border-bottom: 1px solid var(--text-muted);
+ border-bottom: 1px solid var(--muted);
  border-top: none;
  padding-top: 0;
 }
@@ -211,7 +212,7 @@ article header h1 {
 }
 
 .post-content blockquote {
- border-left: 2px solid var(--text-muted);
+ border-left: 2px solid var(--muted);
  padding-left: 1rem;
  color: var(--text-muted);
  margin: 1.5rem 0;
@@ -223,7 +224,7 @@ article header h1 {
 .post-footer {
  margin-top: 3rem;
  padding-top: 1.5rem;
- border-top: 1px solid var(--text-muted);
+ border-top: 1px solid var(--muted);
  font-family: var(--font-ui);
  font-size: 1rem;
  color: var(--text-muted);
@@ -266,7 +267,7 @@ ul.timeline li {
  display: flex;
  gap: 1.5rem;
  padding: 0.5rem 0;
- border-bottom: 1px solid var(--text-muted);
+ /* border-bottom: 1px solid var(--muted); */
  line-height: 1.75;
 }
 
@@ -294,7 +295,7 @@ ul.post-list li {
  display: flex;
  gap: 1.5rem;
  padding: 0.75rem 0;
- border-bottom: 1px solid var(--text-muted);
+ /* border-bottom: 1px solid var(--muted); */
  align-items: baseline;
 }
 
