@@ -58,8 +58,7 @@ header nav {
 .site-name,
 header nav a {
  font-family: var(--font-ui);
- font-size: 1.2rem;
-
+ font-size: 1rem;
  text-decoration: none;
 }
 
