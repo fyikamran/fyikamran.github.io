@@ -1,6 +1,7 @@
 title: "FYI Kamran"
 url: "https://fyikamran.com"
 permalink: /:slug/
+theme: null
 
 plugins:
   - jekyll-sitemap
