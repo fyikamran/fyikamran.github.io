@@ -1,20 +1,69 @@
 /* ==========================================================================
    1. Global Resets & Body
-   ========================================================================== */
+   ==========================================================================
+   */
+  :root {
+  /* Layout Backgrounds */
+  --bg-main: #f4f6f8;        /* The crisp, cold ice-white for the page */
+  --bg-surface: #ffffff;     /* Pure white if you ever want to highlight card blocks or inputs */
+  --bg-code: #e2e8f0;        /* Light slate grey background for inline code blocks */
+
+  /* Typography Colors */
+  --text-primary: #0b0f13;   /* Pure ink black for maximum readability in body/headers */
+  --text-muted: #64748b;     /* Sterile slate grey for your timeline dates and meta text */
+  --text-inline-code: #0f172a; /* Slightly deeper tone for technical code text */
+
+  /* Interactive States (Links & Buttons) */
+  --link-color: #0b0f13;     /* Matches primary text for a strict monochrome aesthetic */
+  --link-hover: #0284c7;     /* A clean, cold sky blue that appears ONLY on mouse-hover */
+
+  /* Structure & Accents */
+  --border-clean: #cbd5e1;   /* A subtle, sharp line color for horizontal rules (<hr>) or grids */
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* Timeline text adjustments */
+.timeline time {
+  color: var(--text-muted);
+}
+
+/* Hyperlink adjustments */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px; /* Gives the line a tiny bit of breathing room */
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* If you ever write inline code back-ticks like `this` in Jekyll */
+code {
+  background-color: var(--bg-code);
+  color: var(--text-inline-code);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Clean dividing lines */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-clean);
+  margin: 2rem 0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px; 
-  line-height: 1.6;
-  color: #292929; /* Off-black reduces eye strain */
-  background-color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-}
 
 /* ==========================================================================
    2. Structural Single-Column Layout
