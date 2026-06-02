@@ -8,14 +8,18 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-  <div class="site-container">
-    {% include header.html %}
-    <div class="post-container">
-    <main>
-      {{ content }}
-    </main>
-    </div>
+  <header>
+    <nav aria-label="Main navigation">
+      {% include header.html %}
+    </nav>
+  </header>
+
+  <main id="main-content">
+    {{ content }}
+  </main>
+
+  <footer>
     {% include footer.html %}
-  </div>
+  </footer>
 </body>
 </html>
