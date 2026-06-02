@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% include seo-meta.html %}
-  {% include schema-post.html %}
-  <link rel="stylesheet" href="/assets/css/styles.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ {% include seo-meta.html %}
+ {% include schema-post.html %}
+ <style>{% include styles.css %}</style>
 </head>
 <body>
-  <div class="site-container">
-    {% include header.html %}
-    <div class="post-container">
-      <main>
-        <article>
-          {{ content }}
-        </article>
-      </main>
-    </div>
-    {% include footer.html %}
-  </div>
+
+ <header>
+   <nav aria-label="Main navigation">
+     {% include header.html %}
+   </nav>
+ </header>
+
+ <main id="main-content">
+   <article>
+
+     <header>
+       <h1>{{ page.title }}</h1>
+       <div class="post-meta">
+         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time>
+         {% if page.category %}
+           <span>{{ page.category | capitalize }}</span>
+         {% endif %}
+         {% if page.last_modified_at %}
+           <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
+         {% endif %}
+       </div>
+     </header>
+
+     <section class="post-content">
+       {{ content }}
+     </section>
+
+     <footer class="post-footer">
+       <p>Written by <a href="/about/">Kamran</a></p>
+     </footer>
+
+   </article>
+ </main>
+
+ <footer>
+   {% include footer.html %}
+ </footer>
+
 </body>
 </html>
