@@ -44,8 +44,8 @@ body {
   Header
   ========================================================================== */
 header {
- padding: 2rem 0;
- border-bottom: 1px solid var(--text-muted);
+ padding: 1rem 0;
+
 }
 
 header nav {
@@ -58,7 +58,7 @@ header nav {
 .site-name,
 header nav a {
  font-family: var(--font-ui);
- font-size: 1rem;
+ font-size: 1.2rem;
 
  text-decoration: none;
 }
