@@ -9,6 +9,7 @@ tags: [Markdown, jekyll]
 image: "/images/default-post.jpg"
 image_alt: "Welcome to My Site"
 slug: "welcome-to-my-site"
+schema_file: "schema-article.html"
 author: Kamran
 published: true
 ---
