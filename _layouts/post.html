@@ -4,7 +4,9 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  {% include seo-meta.html %}
- {% include schema-article.html %}
+{% if page.schema_file %}
+  {% include {{ page.schema_file }} %}
+{% endif %}
 <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
