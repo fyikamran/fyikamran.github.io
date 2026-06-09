@@ -1,28 +1,29 @@
 ---
 layout: default
-title: "fyiKamran"
-description: "Academic Developer with background in Teaching, Engineering, and Indie Development."
+title: "fyiKamran — Education, Technology, Internet"
+description: "Kamran is an Academic Developer with a background in teaching, engineering, and indie development."
 schema_file: "schema-person.html"
 ---
-<section aria-label="Introduction">
+<section class="intro" aria-label="Introduction">
+  <h1>Kamran</h1>
+  <p>Academic Developer with a background in teaching, engineering, and indie development. This site is my home on the internet — documenting what I learn and what I build.</p>
   <p><strong>Education · Technology · Internet</strong></p>
-  <p>Documenting what I learn and what I build.</p>
 </section>
 
 <hr>
 
-<section aria-label="About">
-  <p>I am currently building this site to consolidate my fragmented internet presence and core interests. Built with Jekyll on GitHub Pages, with the goal of a strong foundation that grows over time.</p>
-<p>Learn more <a href="/about/">about me</a></p>
+<section aria-label="This site">
+  <p>This site consolidates my fragmented internet presence and core interests. Built with Jekyll on GitHub Pages — a simple foundation that grows over time.</p>
+  <p>Learn more <a href="/about/">about me</a></p>
 </section>
 
 {% if site.posts.size > 0 %}
-<section aria-label="Recent writing">
-  <h2>Recent Writing</h2>
+<section aria-labelledby="recent-heading">
+  <h2 id="recent-heading">Recent Writing</h2>
   <ul class="post-list">
     {% for post in site.posts limit: 5 %}
       <li>
-        <time>{{ post.date | date: "%B %Y" }}</time>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
