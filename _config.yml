@@ -1,4 +1,4 @@
-title: "FYI Kamran"
+title: "fyiKamran"
 url: "https://fyikamran.com"
 permalink: /:slug/
 theme: null
@@ -7,15 +7,15 @@ plugins:
   - jekyll-sitemap
 
 author: Kamran
-description: "Academic Developer, working at the intersection of education and technology, with a background in teaching and engineering, and an Indie developer building online since 2010."
+description: "Kamran is an Academic Developer with a background in teaching, engineering, and indie development."
 
 schema:
   person_id: "https://fyikamran.com/#person"
-  name: "Muhammad Kamran"
-  alternate_name: "Kamran"
+  name: "Kamran"
+  alternate_name: "Muhammad Kamran"
   twitter: "fyikamran"
   image: "https://fyikamran.com/images/kamran-profile.jpg"
-  description: "Academic Developer working at the intersection of education and technology. Experienced in teaching and engineering, and an Indie developer building online."
+  description: "Kamran is an Academic Developer with a background in teaching, engineering, and indie development."
   job_title: "Academic Developer"
   works_for_name: "London South Bank University"
   works_for_url: "https://www.lsbu.ac.uk"
