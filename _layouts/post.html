@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <a class="skip-link" href="#main-content">Skip to content</a>
+
 
   <main id="main-content">
     <article>
@@ -23,14 +23,16 @@
         {% endif %}
         <div class="post-meta">
           <a href="/" rel="author">Kamran</a>
-          <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></span>
+          {% if page.last_modified_at %}
+            <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
+          {% else %}
+            <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></span>
+          {% endif %}
           {% if page.category %}
             <span>{{ page.category | capitalize }}</span>
           {% endif %}
-          {% if page.last_modified_at %}
-            <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
-          {% endif %}
         </div>
+
       </header>
 
       <div class="post-content">
