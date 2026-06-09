@@ -27,3 +27,14 @@ schema:
   medium: "https://medium.com/@fyikamran"
   orcid: "https://orcid.org/0000-0001-8968-4266"
   scholar: "https://scholar.google.com/citations?user=jSnS_QMAAAAJ"
+
+profiles:
+  - name: LinkedIn
+    url: https://linkedin.com/in/fyikamran
+  - name: GitHub
+    url: https://github.com/fyikamran
+  - name: YouTube
+    url: https://youtube.com/@fyikamran
+  - name: Instagram
+    url: https://instagram.com/fyikamran
+
