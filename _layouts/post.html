@@ -1,46 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- {% include seo-meta.html %}
-{% if page.schema_file %}
-  {% include {{ page.schema_file }} %}
-{% endif %}
-<link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include seo-meta.html %}
+  {% if page.schema_file %}
+    {% include {{ page.schema_file }} %}
+  {% endif %}
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
 
- <main id="main-content">
-   <article>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-     <header>
-       <h1>{{ page.title }}</h1>
-       <div class="post-meta">
-         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time>
-         {% if page.category %}
-           <span>{{ page.category | capitalize }}</span>
-         {% endif %}
-         {% if page.last_modified_at %}
-           <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
-         {% endif %}
-       </div>
-     </header>
+  <main id="main-content">
+    <article>
 
-     <section class="post-content">
-       {{ content }}
-     </section>
+      <header>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}
+          <p class="lede">{{ page.description }}</p>
+        {% endif %}
+        <div class="post-meta">
+          <a href="/" rel="author">Kamran</a>
+          <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></span>
+          {% if page.category %}
+            <span>{{ page.category | capitalize }}</span>
+          {% endif %}
+          {% if page.last_modified_at %}
+            <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
+          {% endif %}
+        </div>
+      </header>
 
-     <footer class="post-footer">
-       <p>Written by <a href="/about/">Kamran</a></p>
-     </footer>
+      <div class="post-content">
+        {{ content }}
+      </div>
 
-   </article>
- </main>
+    </article>
+  </main>
 
- <footer>
-   {% include footer.html %}
- </footer>
+  {% include footer.html %}
 
 </body>
 </html>
