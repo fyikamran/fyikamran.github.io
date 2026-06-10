@@ -1,348 +1,367 @@
-
 /* ==========================================================================
   Reset
   ========================================================================== */
 * {
- box-sizing: border-box;
- margin: 0;
- padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================================================
   Variables
   ========================================================================== */
 :root {
- --bg: #ffffff;
- --text: #111111;
- --text-muted: #999999;
- --muted: #D3D3D3;
- --font-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
- --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
- --font-mono: 'Courier New', Courier, monospace;
- --max-width: 680px;
+  --bg: #ffffff;
+  --text: #111111;
+  --text-muted: #6b6b6b;
+  --muted: #d3d3d3;
+  --code-bg: rgba(17, 17, 17, 0.06);
+  --font-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+  --max-width: 680px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111111;
+    --text: #eeeeee;
+    --text-muted: #a3a3a3;
+    --muted: #3a3a3a;
+    --code-bg: rgba(238, 238, 238, 0.08);
+  }
 }
 
 /* ==========================================================================
   Base
   ========================================================================== */
 html {
- -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
- background: var(--bg);
- color: var(--text);
- font-family: var(--font-body);
- font-size: 1rem;
- line-height: 1.75;
- font-weight: 400;
- max-width: var(--max-width);
- margin: 0 auto;
- padding: 0 1rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
 }
 
 /* ==========================================================================
-  Header
+  Skip Link
+  ========================================================================== */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  z-index: 10;
+}
+
+/* ==========================================================================
+  Header — fyiKamran / [context]
   ========================================================================== */
 header {
- padding: 1rem 0;
-
+  padding: 1rem 0;
 }
 
 header nav {
- display: flex;
- align-items: baseline;
- justify-content: space-between;
- flex-wrap: nowrap;
-}
-
-.site-name,
-header nav a {
- font-family: var(--font-ui);
- font-size: 1rem;
- text-decoration: none;
-}
-
-.site-name {
- color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
 }
 
 header nav a {
- color: var(--text-muted);
+  color: var(--text);
+  text-decoration: none;
 }
 
 header nav a:hover {
- color: var(--text);
+  color: var(--text-muted);
+}
+
+header nav strong {
+  font-weight: 600;
+  color: var(--text);
 }
 
 /* ==========================================================================
   Main
   ========================================================================== */
 main {
- padding: 2rem 0 4rem;
+  padding: 2rem 0 4rem;
 }
 
 /* ==========================================================================
   Footer
   ========================================================================== */
 footer {
- padding: 1.5rem 0 3rem;
- border-top: 1px solid var(--text-muted);
- font-family: var(--font-ui);
- font-size: 1rem;
- color: var(--text-muted);
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--muted);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
 }
 
 footer nav {
- display: flex;
- gap: 1.25rem;
- margin-bottom: 1rem;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 footer nav a {
- color: var(--text-muted);
- text-decoration: none;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 footer nav a:hover {
- color: var(--text);
+  color: var(--text);
+}
+
+footer nav svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: block;
 }
 
 footer p {
- margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* ==========================================================================
   Typography
   ========================================================================== */
 h1 {
- font-size: 1.75rem;
- font-weight: 400;
- line-height: 1.75;
- letter-spacing: -0.01em;
- margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
- font-size: 1.25rem;
- font-weight: 400;
- line-height: 1.75;
- margin-bottom: 1rem;
- margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 h3 {
- font-size: 1rem;
- font-weight: 400;
- line-height: 1.75;
- margin-bottom: 0.5rem;
- margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 p {
- margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 p:last-child {
- margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 a {
- color: var(--text);
- text-decoration: underline;
- text-underline-offset: 3px;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 a:hover {
- color: var(--text-muted);
+  color: var(--text-muted);
 }
 
 /* ==========================================================================
   Horizontal Rule
   ========================================================================== */
 hr {
- border: none;
- border-top: 1px solid var(--muted);
- margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--muted);
+  margin: 2rem 0;
 }
 
 /* ==========================================================================
   Post Header
   ========================================================================== */
 article header {
- margin-bottom: 2rem;
- padding-bottom: 1.5rem;
- border-bottom: 1px solid var(--muted);
- border-top: none;
- padding-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--muted);
+  border-top: none;
+  padding-top: 0;
 }
 
 article header h1 {
- margin-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.lede {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
 }
 
 .post-meta {
- font-family: var(--font-ui);
- font-size: 1rem;
- color: var(--text-muted);
- display: flex;
- gap: 1rem;
- flex-wrap: wrap;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.post-meta a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.post-meta a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ==========================================================================
   Post Content
   ========================================================================== */
 .post-content h2 {
- margin-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .post-content p {
- margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .post-content ul,
 .post-content ol {
- padding-left: 1.25rem;
- margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .post-content li {
- margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .post-content blockquote {
- border-left: 2px solid var(--muted);
- padding-left: 1rem;
- color: var(--text-muted);
- margin: 1.5rem 0;
-}
-
-/* ==========================================================================
-  Post Footer
-  ========================================================================== */
-.post-footer {
- margin-top: 3rem;
- padding-top: 1.5rem;
- border-top: 1px solid var(--muted);
- font-family: var(--font-ui);
- font-size: 1rem;
- color: var(--text-muted);
+  border-left: 2px solid var(--muted);
+  padding-left: 1rem;
+  color: var(--text-muted);
+  margin: 1.5rem 0;
 }
 
 /* ==========================================================================
   Code
   ========================================================================== */
 code {
- font-family: var(--font-mono);
- font-size: 0.9rem;
- background: rgba(17, 17, 17, 0.06);
- color: var(--text);
- padding: 0.15rem 0.4rem;
- border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: var(--code-bg);
+  color: var(--text);
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
 }
 
 pre {
- background: rgba(17, 17, 17, 0.06);
- padding: 1.25rem;
- overflow-x: auto;
- margin-bottom: 1.25rem;
+  background: var(--code-bg);
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
 }
 
 pre code {
- background: none;
- padding: 0;
- line-height: 1.75;
+  background: none;
+  padding: 0;
+  line-height: 1.75;
 }
 
 /* ==========================================================================
   Timeline
   ========================================================================== */
 ul.timeline {
- list-style: none;
- padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul.timeline li {
- display: flex;
- gap: 1.5rem;
- padding: 0.5rem 0;
- /* border-bottom: 1px solid var(--muted); */
- line-height: 1.75;
-}
-
-ul.timeline li:last-child {
- border-bottom: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  line-height: 1.75;
 }
 
 ul.timeline time {
- font-family: var(--font-ui);
- font-size: 1rem;
- color: var(--text-muted);
- min-width: 3.5rem;
- flex-shrink: 0;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
+  min-width: 3.5rem;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
   Post List
   ========================================================================== */
 ul.post-list {
- list-style: none;
- padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul.post-list li {
- display: flex;
- gap: 1.5rem;
- padding: 0.75rem 0;
- /* border-bottom: 1px solid var(--muted); */
- align-items: baseline;
-}
-
-ul.post-list li:last-child {
- border-bottom: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  align-items: baseline;
 }
 
 ul.post-list time {
- font-family: var(--font-ui);
- font-size: 1rem;
- color: var(--text-muted);
- min-width: 6rem;
- flex-shrink: 0;
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
+  min-width: 6rem;
+  flex-shrink: 0;
 }
 
 ul.post-list a {
- font-size: 1rem;
- color: var(--text);
- text-decoration: none;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
 }
 
 ul.post-list a:hover {
- text-decoration: underline;
- text-underline-offset: 3px;
-}
-
-/* ==========================================================================
-  Social Icons
-  ========================================================================== */
-footer nav svg {
- width: 1.125rem;
- height: 1.125rem;
- display: block;
-}
-
-footer nav a {
- display: inline-flex;
- align-items: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* ==========================================================================
   Mobile
   ========================================================================== */
 @media (max-width: 600px) {
- h1 { font-size: 1.375rem; }
- h2 { font-size: 1.125rem; }
- ul.timeline time { min-width: 2.75rem; }
- ul.post-list time { min-width: 4.5rem; }
- .post-meta { gap: 0.5rem; }
+  h1 { font-size: 1.375rem; }
+  h2 { font-size: 1.125rem; }
+  ul.timeline time { min-width: 2.75rem; }
+  ul.post-list time { min-width: 4.5rem; }
+  .post-meta { gap: 0.5rem; }
 }
