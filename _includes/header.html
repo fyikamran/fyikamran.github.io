@@ -1,4 +1,16 @@
-<!-- The Global Header -->
-<a href="/" class="site-name">fyiKamran</a>
-<a href="/about/">About</a>
-
+<!-- Global header: fyiKamran / [context] -->
+<header>
+  <nav class="site-nav" aria-label="Site">
+    {% if page.url == "/" %}
+      <strong aria-current="page">fyiKamran</strong>
+    {% else %}
+      <a href="/"><strong>fyiKamran</strong></a>
+      <span aria-hidden="true">/</span>
+      {% if page.layout == "post" %}
+        <span>{% if page.category %}{{ page.category | capitalize }}{% else %}Writing{% endif %}</span>
+      {% else %}
+        <span>{{ page.crumb | default: page.title }}</span>
+      {% endif %}
+    {% endif %}
+  </nav>
+</header>
