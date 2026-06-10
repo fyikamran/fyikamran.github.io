@@ -14,7 +14,7 @@ author: Kamran
 published: true
 ---
 
-# Hello World
+## Hello World
 
 This is my very first post built natively with Jekyll and hosted on GitHub Pages. Writing in clean Markdown makes publishing incredibly simple.
 
