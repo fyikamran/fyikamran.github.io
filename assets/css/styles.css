@@ -83,7 +83,7 @@ header {
 }
 
 header nav {
-
+  display: flex;
   align-items: baseline;
   gap: 0.5rem;
   font-family: var(--font-ui);
