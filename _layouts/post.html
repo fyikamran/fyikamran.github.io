@@ -26,9 +26,6 @@
           {% else %}
             <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></span>
           {% endif %}
-          {% if page.category %}
-            <span>{{ page.category | capitalize }}</span>
-          {% endif %}
         </div>
 
       </header>
