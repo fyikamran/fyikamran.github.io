@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to My Site"
 description: "Hello World! this is the first post on this site"
 date: 2026-05-29
-last_modified_at: 2026-05-31
+last_modified_at:
 category: Internet
 tags: [Markdown, jekyll]
 image: "/images/default-post.jpg"
