@@ -58,36 +58,6 @@ body {
 
 
 /* ==========================================================================
-  Header — fyiKamran / [context]
-  ========================================================================== */
-header {
-  padding: 1rem 0;
-}
-
-header nav {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  font-family: var(--font-ui);
-  font-size: 1rem;
-  color: var(--text-muted);
-}
-
-header nav a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-header nav a:hover {
-  color: var(--text-muted);
-}
-
-header nav strong {
-  font-weight: 600;
-  color: var(--text);
-}
-
-/* ==========================================================================
   Main
   ========================================================================== */
 main {
@@ -197,19 +167,18 @@ article header {
   border-bottom: 1px solid var(--muted);
   border-top: none;
   padding-top: 0;
+  text-align: center;
 }
 
 article header h1 {
   margin-bottom: 0.75rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  text-align: centre;
 }
 
 .lede {
   font-size: 1.125rem;
   margin-bottom: 0.75rem;
-  text-align: centre;
 }
 
 
