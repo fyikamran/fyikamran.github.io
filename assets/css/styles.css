@@ -196,10 +196,13 @@ article header {
   border-bottom: 1px solid var(--muted);
   border-top: none;
   padding-top: 0;
+  text-align: centre;
 }
 
 article header h1 {
   margin-bottom: 0.75rem;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .lede {
