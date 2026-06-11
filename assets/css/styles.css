@@ -136,12 +136,13 @@ footer p {
   Typography
   ========================================================================== */
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+  font-weight:600;
 }
 
 h2 {
@@ -196,18 +197,19 @@ article header {
   border-bottom: 1px solid var(--muted);
   border-top: none;
   padding-top: 0;
-  text-align: centre;
 }
 
 article header h1 {
   margin-bottom: 0.75rem;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
+  text-align: centre;
 }
 
 .lede {
   font-size: 1.125rem;
   margin-bottom: 0.75rem;
+  text-align: centre;
 }
 
 
