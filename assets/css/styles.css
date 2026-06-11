@@ -56,24 +56,6 @@ body {
   outline-offset: 2px;
 }
 
-/* ==========================================================================
-  Skip Link
-  ========================================================================== */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  font-family: var(--font-ui);
-  font-size: 0.875rem;
-}
-
-.skip-link:focus {
-  left: 1rem;
-  top: 1rem;
-  background: var(--bg);
-  color: var(--text);
-  padding: 0.5rem 0.75rem;
-  z-index: 10;
-}
 
 /* ==========================================================================
   Header — fyiKamran / [context]
@@ -154,10 +136,11 @@ footer p {
   Typography
   ========================================================================== */
 h1 {
-  font-size: 1.75rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -221,29 +204,11 @@ article header h1 {
 
 .lede {
   font-size: 1.125rem;
-  color: var(--text-muted);
   margin-bottom: 0.75rem;
 }
 
-.post-meta {
-  font-family: var(--font-ui);
-  font-size: 1rem;
-  color: var(--text-muted);
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 
-.post-meta a {
-  color: var(--text-muted);
-  text-decoration: none;
-}
 
-.post-meta a:hover {
-  color: var(--text);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 
 /* ==========================================================================
   Post Content
