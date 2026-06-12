@@ -24,10 +24,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111111;
-    --text: #eeeeee;
-    --text-muted: #a3a3a3;
-    --muted: #3a3a3a;
+    --bg: #151515;
+    --text: #dddddd;
+    --text-muted: #999999;
+    --muted: #999999;
     --code-bg: rgba(238, 238, 238, 0.08);
   }
 }
