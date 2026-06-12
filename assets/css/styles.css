@@ -121,6 +121,15 @@ ul.post-list time {
   flex-shrink: 0;
 }
 
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--text-muted);
+}
 
 /* ==========================================================================
   Main
