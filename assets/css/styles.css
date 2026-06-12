@@ -162,27 +162,6 @@ hr {
 /* ==========================================================================
   Post Header
   ========================================================================== */
-article header {
-  margin-top: calc(1.75rem * 4);
-  margin-bottom: calc(1.75rem * 2);
-}
-
-article header h1 {
-  font-size: 2rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin: 0 0 1.75rem;
-}
-
-.lede {
-  font-size: 1.125rem;
-  margin-bottom: 0.75rem;
-  margin: 0 auto 1.75rem;
-  font-style: italic;
-}
-
-
-
 
 /* ==========================================================================
   Post Content
