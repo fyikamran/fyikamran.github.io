@@ -163,7 +163,6 @@ hr {
   Post Header
   ========================================================================== */
 article header {
-  text-align: center;
   margin-top: calc(1.75rem * 4);
   margin-bottom: calc(1.75rem * 2);
 }
