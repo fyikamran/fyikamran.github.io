@@ -1,0 +1,141 @@
+<style>
+/* ========= Reset ========= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= Variables ========= */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --text-muted: #6b6b6b;
+  --muted: #d3d3d3;
+  --code-bg: rgba(17, 17, 17, 0.06);
+  --font-body: system-ui, sans-serif;
+  --font-ui: system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
+  --max-width: 680px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151515;
+    --text: #dddddd;
+    --text-muted: #999999;
+    --muted: #999999;
+    --code-bg: rgba(238, 238, 238, 0.08);
+  }
+}
+
+/* ========= Base ========= */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  font-weight:600;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--muted);
+  margin: 2rem 0;
+}
+
+ul.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.post-list li {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  align-items: baseline;
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+ul.post-list time {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
+  min-width: 6rem;
+  flex-shrink: 0;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--text-muted);
+}
+
+/* ========= Main ========= */
+main {
+  padding: 2rem 0 4rem;
+}
+
+/* ========= Footer ========= */
+footer {
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--muted);
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+</style>
