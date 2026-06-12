@@ -35,3 +35,5 @@ profiles:
     url: https://github.com/fyikamran
   - name: YouTube
     url: https://youtube.com/@fyikamran
+  - name: Email
+    url: mailto:hello@fyikamran.com
