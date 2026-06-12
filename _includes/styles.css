@@ -16,7 +16,7 @@
   --font-body: system-ui, sans-serif;
   --font-ui: system-ui, sans-serif;
   --font-mono: system-ui, ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
-  --max-width: 680px;
+  --max-width: 720px;
 }
 
 @media (prefers-color-scheme: dark) {
