@@ -16,9 +16,10 @@
   --text-muted: #6b6b6b;
   --muted: #d3d3d3;
   --code-bg: rgba(17, 17, 17, 0.06);
-  --font-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
-  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: 'Courier New', Courier, monospace;
+--font-body: system-ui, sans-serif;
+--font-ui: system-ui, sans-serif;
+--font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Consolas, monospace;
+
   --max-width: 680px;
 }
 
