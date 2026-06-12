@@ -97,6 +97,31 @@ hr {
   margin: 2rem 0;
 }
 
+ul.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.post-list li {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  align-items: baseline;
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+ul.post-list time {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-muted);
+  min-width: 6rem;
+  flex-shrink: 0;
+}
+
+
 /* ==========================================================================
   Main
   ========================================================================== */
