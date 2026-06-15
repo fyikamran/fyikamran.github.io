@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Test"
+description: "Test"
+date: 2026-16-15
+last_modified_at:
+category: Internet
+tags: [Personal Sites, Platforms]
+image: "/images/default-post.jpg"
+image_alt: "Default"
+slug: "test"
+schema_file: "schema-article.html"
+author: Kamran
+published: true
+---
+
+## Platforms to Create a Personal Site<
+
+A list of platforms available for creating a personal website.
+
+### Why this setup is awesome:
+
+{% for item in site.data.personal_site_platforms %}
+* {{ item.Platform }}
+{% endfor %}
