@@ -1,0 +1,18 @@
+---
+layout: default
+title: "List of Platforms to Create a Personal Site — fyiKamran"
+description: "Kamran is an Academic Developer with a background in teaching, engineering, and indie development."
+schema_file: "schema-person.html"
+---
+<section>
+  <h1>Platforms to Create a Personal Site</h1>
+  <p>A list of platforms available for creating a personal website.</p>
+</section>
+
+<hr>
+
+<ul>
+{% for item in site.data.personal_site_platforms %}
+  <li> {{ item.name }} </li>
+{% endfor %}
+</ul>
