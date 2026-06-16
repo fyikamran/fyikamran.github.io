@@ -28,5 +28,8 @@ This is my very first post built natively with Jekyll and hosted on GitHub Pages
 * **Clean URLs:** No messy dates or `.html` file extensions cluttering the address bar.
 
 ## Adding Table of Content in Jekyll
-Jekyll using kramdown by default on Github Pages, so table of content can be added to any post by simply adding {:toc} directly in the post or page markdown.
- '''{:toc}'''
+Jekyll using kramdown by default on Github Pages, so table of content can be added to any post by simply adding {:toc} directly in the post or page markdown. You just need to add the following in the markdown, including the line starting with "*".
+```
+* Table of Content
+{:toc}
+```
