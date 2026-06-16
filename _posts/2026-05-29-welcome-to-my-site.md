@@ -1,20 +1,23 @@
 ---
 layout: post
-title: "Welcome to My Site"
-description: "Hello World! this is the first post on this site"
+title: "Jekyll on GitHub Pages"
+description: "This site is built with Jekyll and hosted on GitHub Pages"
 date: 2026-05-29
-last_modified_at:
+last_modified_at: 2026-06-16
 category: Internet
 tags: [Markdown, jekyll]
 image: "/images/default-post.jpg"
-image_alt: "Welcome to My Site"
-slug: "welcome-to-my-site"
+image_alt: "Jekyll on GitHub Pages"
+slug: "jekyll-gitHub-pages"
 schema_file: "schema-article.html"
 author: Kamran
 published: true
 ---
+This post contains all the things i learn while setting up this site using Jekyll on Github Pages.
 
-## Hello World
+{:toc}
+
+## Jekyll
 
 This is my very first post built natively with Jekyll and hosted on GitHub Pages. Writing in clean Markdown makes publishing incredibly simple.
 
@@ -22,3 +25,7 @@ This is my very first post built natively with Jekyll and hosted on GitHub Pages
 * **No databases:** Everything runs completely flat and lightning fast.
 * **No deployment scripts:** GitHub automatically rebuilds the site the second I save a file.
 * **Clean URLs:** No messy dates or `.html` file extensions cluttering the address bar.
+
+## Adding Table of Content in Jekyll
+Jekyll using kramdown by default on Github Pages, so table of content can be added to any post by simply adding {:toc} directly in the post or page markdown.
+> "{:toc}"
