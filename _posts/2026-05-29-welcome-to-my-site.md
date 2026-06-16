@@ -15,6 +15,7 @@ published: true
 ---
 This post contains all the things i learn while setting up this site using Jekyll on Github Pages.
 
+* Content
 {:toc}
 
 ## Jekyll
@@ -28,4 +29,4 @@ This is my very first post built natively with Jekyll and hosted on GitHub Pages
 
 ## Adding Table of Content in Jekyll
 Jekyll using kramdown by default on Github Pages, so table of content can be added to any post by simply adding {:toc} directly in the post or page markdown.
-> "{:toc}"
+ '''{:toc}'''
