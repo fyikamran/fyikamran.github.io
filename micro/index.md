@@ -3,6 +3,7 @@ layout: default
 title: "Micro Blog — fyiKamran"
 description: "Quick thoughts, links, and commentary."
 ---
+
 {% assign microposts = site.microposts | sort: 'date' | reverse %}
 {% for post in microposts %}
 <article class="micro-post">
@@ -12,4 +13,5 @@ description: "Quick thoughts, links, and commentary."
   {% endif %}
   {{ post.content }}
 </article>
+<hr>
 {% endfor %}
