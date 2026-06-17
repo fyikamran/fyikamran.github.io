@@ -6,6 +6,10 @@ theme: null
 plugins:
   - jekyll-sitemap
 
+collections:
+  microposts:
+    output: false
+
 author: Kamran
 description: "Kamran is an Academic Developer with a background in teaching, engineering, and indie development."
 
