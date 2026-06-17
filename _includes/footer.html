@@ -1,6 +1,6 @@
 <footer class="site-footer">
   <p>
     {% for profile in site.profiles %}<a href="{{ profile.url }}" rel="me">{{ profile.name }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
-<a rel="me" href="https://mastodon.social/@fyikamran">Mastodon</a>
+
   </p>
 </footer>
