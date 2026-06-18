@@ -17,9 +17,9 @@
         {% if page.description %}
           <p class="lede">{{ page.description }}</p>
         {% endif %}
-          <a href="/" rel="author">Kamran</a><span aria-hidden="true"> · </span>
+          <a href="/" rel="author" style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Kamran</a><span aria-hidden="true"> · </span>
           {% if page.last_modified_at %}
-            <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
+            <span style="display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %Y" }}</time></span>
           {% else %}
             <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></span>
           {% endif %}
